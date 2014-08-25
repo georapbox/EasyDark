@@ -6,7 +6,6 @@
  * Rendition of https://github.com/chriskempson/tomorrow-theme
  */
 
-
 /* Overall Colors */
 @background: #1d1f21;
 @current-line: #282a2e;
@@ -18,15 +17,14 @@
 @green: #b5bd68;
 @red: #cc6666;
 @aqua: #8abeb7;
-/*@yellow: #f0c674;*/
 @yellow: #f0c674;
 
 /* Selection colors */
 @selection-color-focused: rgba(96, 96, 96, 0.5);
 @selection-color-unfocused: #424242;
 
-@activeline-bgcolor: rgba(96, 96, 96, 0.3);
-@activeline-number-bgcolor: rgba(96, 96, 96, 0.3);
+@activeline-bgcolor: rgba(96, 96, 96, 0.2);
+@activeline-number-bgcolor: rgba(96, 96, 96, 0.2);
 @matching-bracket: rgb(72, 72, 72);
 
 .CodeMirror .cm-keyword { color: @purple; }
@@ -58,6 +56,7 @@
 
 .CodeMirror,
 .CodeMirror .CodeMirror-scroll {
+    font-family: Consolas, 'Courier New', Courier !important;
     background-color: @background;
     color: @foreground;
 }
@@ -86,8 +85,7 @@
 .CodeMirror .CodeMirror-matchingbracket {
     color: @foreground !important;
     background-color: @matching-bracket;
-    text-decoration: underline;
-    text-decoration-color: #f1f1f1 !important;
+    border-bottom: 1px solid @orange;
 }
 
 .CodeMirror .CodeMirror-linenumber {
@@ -100,7 +98,8 @@
 }
 
 .CodeMirror-matchingtag {
-    background: @matching-bracket;
+    background-color: transparent;
+    border-bottom: 1px solid @orange;
 }
 
 .CodeMirror .CodeMirror-cursor {
@@ -113,13 +112,30 @@
     width: 1.2ex;
 }
 
-/* Non-editor styling */
+/**
+ * Code Folding (https://github.com/thehogfather/brackets-code-folding)
+ * --------------------------------------------------------------------
+ */
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-blank,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-open {
+    color: #646464;
+}
 
+.CodeMirror-foldmarker {
+    background-color: #333;
+    border-color: #555;
+    color: #555;
+    padding: 0 10px;
+}
+
+/* Non-editor styling */
 #image-holder,
 #not-editor {
     background-color: @background;
 }
-
 #image-holder {
     color: @foreground;
 }
