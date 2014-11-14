@@ -13,6 +13,7 @@
 @comment: #6c6c6c;
 @orange: #de935f;
 @blue: #81a2be;
+@deepBlue: #284160;
 @purple: #b294bb;
 @green: #b5bd68;
 @red: #cc6666;
@@ -56,17 +57,17 @@
 
 .CodeMirror,
 .CodeMirror .CodeMirror-scroll {
-    font-family: Consolas, 'Courier New', Courier !important;
+//    font-family: Consolas, 'Courier New', Courier !important;
     background-color: @background;
     color: @foreground;
 }
 
 .CodeMirror .CodeMirror-selected {
-    background: @selection-color-unfocused;
+    background-color: @selection-color-unfocused;
 }
 
 .CodeMirror-focused .CodeMirror-selected {
-    background: @selection-color-focused;
+    background-color: @selection-color-focused;
 }
 
 .CodeMirror .CodeMirror-gutters {
@@ -94,7 +95,7 @@
 
 .CodeMirror-activeline-background,
 .CodeMirror-activeline .CodeMirror-gutter-elt {
-    background: @activeline-bgcolor !important;
+    background-color: @activeline-bgcolor !important;
 }
 
 .CodeMirror-matchingtag {
@@ -129,6 +130,15 @@
     border-color: #555;
     color: #555;
     padding: 0 10px;
+}
+
+/**
+ * Bookmarks (https://github.com/JeffryBooher/brackets-bookmarks-extension)
+ * ------------------------------------------------------------------------
+ */
+.bookmark .CodeMirror-linenumber  {
+    color: #ffffff !important;
+    background-color: @deepBlue !important;
 }
 
 /* Non-editor styling */
