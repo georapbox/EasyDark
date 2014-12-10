@@ -26,7 +26,6 @@
 
 @activeline-bgcolor: rgba(96, 96, 96, 0.2);
 @activeline-number-bgcolor: rgba(96, 96, 96, 0.2);
-@matching-bracket: rgb(72, 72, 72);
 
 .CodeMirror .cm-keyword { color: @purple; }
 .CodeMirror .cm-atom { color: @orange; }
@@ -57,7 +56,6 @@
 
 .CodeMirror,
 .CodeMirror .CodeMirror-scroll {
-//    font-family: Consolas, 'Courier New', Courier !important;
     background-color: @background;
     color: @foreground;
 }
@@ -67,7 +65,7 @@
 }
 
 .CodeMirror-focused .CodeMirror-selected {
-    background-color: @selection-color-focused;
+    background-color: @deepBlue;
 }
 
 .CodeMirror .CodeMirror-gutters {
@@ -85,7 +83,7 @@
 
 .CodeMirror .CodeMirror-matchingbracket {
     color: @foreground !important;
-    background-color: @matching-bracket;
+    background-color: @deepBlue;
     border-bottom: 1px solid @orange;
 }
 
