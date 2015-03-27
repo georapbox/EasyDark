@@ -56,9 +56,9 @@
 
 .CodeMirror,
 .CodeMirror .CodeMirror-scroll {
-    font-family: Consolas, 'Courier New', Courier !important;
+    font-family: 'Courier New', Courier !important;
     line-height: 1.3em;
-    background-color: @background;
+	background-color: @background;
     color: @foreground;
 }
 
@@ -84,9 +84,10 @@
 }
 
 .CodeMirror .CodeMirror-matchingbracket {
-    color: @foreground !important;
-    background-color: #33363b;
-    border-bottom: 1px solid @orange;
+    color: @orange !important;
+    background-color: #4d515a;
+	font-weight: bold;
+	line-height: 1;
 }
 
 .CodeMirror .CodeMirror-linenumber {
@@ -104,7 +105,7 @@
 }
 
 .CodeMirror .CodeMirror-cursor {
-    border-left: 1px solid @foreground !important;
+    border-left: 2px solid @foreground !important;
 }
 
 .CodeMirror .CodeMirror-overwrite .CodeMirror-cursor {
