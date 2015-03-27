@@ -85,7 +85,7 @@
 
 .CodeMirror .CodeMirror-matchingbracket {
     color: @orange !important;
-    background-color: #4d515a;
+    background-color: @activeline-bgcolor;
 	font-weight: bold;
 	line-height: 1;
 }
@@ -105,7 +105,7 @@
 }
 
 .CodeMirror .CodeMirror-cursor {
-    border-left: 2px solid @foreground !important;
+    border-left: 1px solid @foreground !important;
 }
 
 .CodeMirror .CodeMirror-overwrite .CodeMirror-cursor {
