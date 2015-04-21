@@ -24,7 +24,7 @@
 @selection-color-focused: rgba(96, 96, 96, 0.5);
 @selection-color-unfocused: #424242;
 
-@activeline-bgcolor: #313131;
+@activeline-bgcolor: #24262c;
 @activeline-number-bgcolor: #24262c;
 
 .CodeMirror .cm-keyword { color: @purple; }
@@ -56,9 +56,7 @@
 
 .CodeMirror,
 .CodeMirror .CodeMirror-scroll {
-    font-family: 'Courier New', Courier !important;
-    line-height: 1.3em;
-	background-color: @background;
+    background-color: @background;
     color: @foreground;
 }
 
@@ -67,7 +65,7 @@
 }
 
 .CodeMirror-focused .CodeMirror-selected {
-    background-color: #4a4b4d;
+    background-color: #484d55;
 }
 
 .CodeMirror .CodeMirror-gutters {
@@ -84,10 +82,9 @@
 }
 
 .CodeMirror .CodeMirror-matchingbracket {
-    color: @orange !important;
-    background-color: @activeline-bgcolor;
-	font-weight: bold;
-	line-height: 1;
+    color: @foreground !important;
+    background-color: #33363b;
+    border-bottom: 1px solid @orange;
 }
 
 .CodeMirror .CodeMirror-linenumber {
